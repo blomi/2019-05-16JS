@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+	</head>
+	<body>
+		
+		<div id="container"></div>
+
+		<script id="home-template" type="text/x-handlebars-template">
+			<div id="task-list-container">
+				<input id="task-name-input" placeholder="enter task name">
+				<input type="button" value="ADD" id="task-add-btn"/>
+				<ul id="task-list"></ul>
+			</div>
+		</script>
+
+		<script id="edit-template" type="text/x-handlebars-template">
+		  <div id="edit-container">
+		    <h1> Task edit gui: </h1>
+		    <div class="edit-content">
+		      <h3>Name</h3>
+		      <input id="task-name" type="text" value="{{name}}">
+		      <h3>Date</h3>	
+		      <input id="task-date" type="text">
+		      <h3>Asignment</h3>
+		      <input id="task-description" type="text">
+
+		    </div>
+		  </div>
+		</script>
+
+		<script id="task-item-template" type="text/x-handlebars-template">
+		  <li id="task-item-container">
+		    <div class="task-item-name">{{name}}</div>
+		    <a class="task-item-edit" href="#!/edit/{{index}}">EDIT</div>
+		    <div class="task-item-remove">X</div>
+		  </li>
+		</script>
+
+		<script src="handlebars-v4.1.2.js"></script>
+		<script src="http://unpkg.com/navigo@6"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
